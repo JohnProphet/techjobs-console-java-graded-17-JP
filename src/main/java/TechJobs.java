@@ -1,3 +1,5 @@
+import jdk.jfr.Name;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +27,7 @@ public class TechJobs {
         actionChoices.put("search", "Search");
         actionChoices.put("list", "List");
 
-        System.out.println("Welcome to LaunchCode's TechJobs App!");
+        System.out.println("\n=---=---=---=---=---=---=---=---=---=\nWelcome to LaunchCode's TechJobs App!\n=---=---=---=---=---=---=---=---=---=");
 
         // Allow the user to search until they manually quit
         while (true) {
@@ -120,6 +122,11 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+
+// if
+        System.out.println("*****\nposition type: " + "position" + "\nname: " + "name" + "\nemployer: " + "employer" + "\nlocation: " + "location" + "\ncore competency: " + "skills" + "\n*****\n");
+
+
+
     }
 }
