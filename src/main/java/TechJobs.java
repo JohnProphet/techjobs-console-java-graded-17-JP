@@ -1,5 +1,3 @@
-import jdk.jfr.Name;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +25,7 @@ public class TechJobs {
         actionChoices.put("search", "Search");
         actionChoices.put("list", "List");
 
-        System.out.println("\n\n\n=---=---=---=---=---=---=---=---=---=\nWelcome to LaunchCode's TechJobs App!\n=---=---=---=---=---=---=---=---=---=");
+        System.out.println("Welcome to LaunchCode's TechJobs App!");
 
         // Allow the user to search until they manually quit
         while (true) {
@@ -79,7 +77,7 @@ public class TechJobs {
         Boolean validChoice = false;
         String[] choiceKeys = new String[choices.size()];
 
-        // Put the choices in an ordered structure so we can
+        // Put the choices in an ordered structure, so we can
         // associate an integer with each one
         int i = 0;
         for (String choiceKey : choices.keySet()) {
@@ -124,18 +122,32 @@ public class TechJobs {
         // iterate over an ARRAYLIST of jobs. Each job is a HASHMAP.
         // Create a NESTED LOOP to loop over each HASHMAP.
 
-        if (!someJobs.isEmpty()) {
+//        if (!someJobs.isEmpty()) {
+//            for (HashMap<String, String> job : someJobs) {
+//                System.out.println("\n*****");
+//                for (Map.Entry<String, String> jobInfo : job.entrySet()) {
+//                    System.out.println(jobInfo.getKey() + ": " + jobInfo.getValue());
+//                }
+//                System.out.println("*****");
+//            }
+//
+//        } else {
+//                System.out.print("No Results");
+//        }
+//    }
+        if (someJobs.size() == 0) {
+            System.out.print("No Results");
+        }else {
             for (HashMap<String, String> job : someJobs) {
-                System.out.println("*****");
+                System.out.println("\n*****");
                 for (Map.Entry<String, String> jobInfo : job.entrySet()) {
                     System.out.println(jobInfo.getKey() + ": " + jobInfo.getValue());
                 }
-                System.out.println("*****\n");
+                System.out.println("*****");
             }
 
-        } else {
-                System.out.println("No Results");
         }
     }
+
 }
 
